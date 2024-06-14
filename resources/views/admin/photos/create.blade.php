@@ -86,8 +86,8 @@
             @enderror
         </div>
         <div class="container mb-5 d-flex gap-3 justify-content-end">
-            <a class="btn btn-primary " href="{{route('admin.photos.index')}}"> Back</a>
-            <button type="submit" class="btn btn-primary" >Create</button>
+            <a class="btn btn-dark " href="{{route('admin.photos.index')}}"> Back</a>
+            <button type="submit" class="btn btn-dark" >Create</button>
         </div>
         
         

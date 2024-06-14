@@ -8,6 +8,7 @@
     </header>
 
     <div class="container mt-4">
+        @include('partials.message')
         <div
             class="table-responsive-md"
         >

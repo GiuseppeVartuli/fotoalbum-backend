@@ -7,7 +7,7 @@ use App\Http\Requests\StorePhotoRequest;
 use App\Http\Requests\UpdatePhotoRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
+
 
 class PhotoController extends Controller
 {
@@ -59,7 +59,7 @@ class PhotoController extends Controller
      */
     public function edit(Photo $photo)
     {
-        //
+        return view('admin.photos.edit', compact('photo'));
     }
 
     /**
@@ -67,7 +67,22 @@ class PhotoController extends Controller
      */
     public function update(UpdatePhotoRequest $request, Photo $photo)
     {
-        //
+        //dd($request->all());
+
+        $val_data = $request->validated();
+
+        if($request->has('cover_image')){
+
+            if($photo->cover_image) {
+                Storage::delete($photo->cover_image);
+            }
+            $image_path = Storage::put('uploads', $request->cover_image);
+            $val_data['cover_image'] = $image_path;
+        }
+
+        $photo->update($val_data);
+
+        return to_route('admin.photos.index')->with('message', 'Photo successfully updated');
     }
 
     /**
