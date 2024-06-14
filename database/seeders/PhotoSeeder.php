@@ -23,7 +23,6 @@ class PhotoSeeder extends Seeder
             $newPhoto->cover_image = $photo['cover_image'];
             $newPhoto->description = $photo['description'];
             $newPhoto->camera = $photo['camera'];
-            $newPhoto->slug = Str::of($photo['title'])->slug('-');
             $newPhoto->save();
         }
     }

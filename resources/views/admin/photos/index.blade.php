@@ -23,7 +23,6 @@
                         <th>Cover Image</th>
                         <th>Title</th>
                         <th>Camera</th>
-                        <th>Slug</th>
                         <th>Operations</th>
                     </tr>
                 </thead>
@@ -44,14 +43,13 @@
                     </td>
                     <td>{{$photo->title}}</td>
                     <td>{{$photo->camera}}</td>
-                    <td>{{$photo->slug}}</td>
                     <td>VIEW\EDIT\DELETE</td>
                 </tr>
                     @empty
                     <tr
                     class="table-dark"
                 >
-                    <td scope="row" colspan="6">Not Photo</td>
+                    <td scope="row" colspan="5">Not Photo</td>
                     
                 </tr>
                     @endforelse

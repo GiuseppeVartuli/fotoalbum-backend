@@ -39,8 +39,9 @@ class PhotoController extends Controller
         $val_data = $request->validated();
 
         $val_data['cover_image'] = Storage::put('uploads', $request->cover_image);
-        $val_data['slug'] = Str::slug($request->title, '-');
-        dd($val_data);
+        //$val_data['slug'] = Str::slug($request->title, '-');
+        
+        //dd($val_data);
         Photo::create($val_data);
         
         return to_route('admin.photos.index')->with('message', 'Photo added successfully');
