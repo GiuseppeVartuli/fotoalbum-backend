@@ -4,8 +4,11 @@
 @section('content')
     
 <header>
-    <div class="container mt-4">
+    <div class="container mt-4 d-flex justify-content-between">
         <h1>{{$photo->title}}</h1>
+        <div>
+            <a href="{{route('admin.photos.index')}}" class="btn btn-dark">Back</a>
+        </div>
     </div>
 </header>
 <!--
@@ -29,11 +32,11 @@
     <div class="container-xxl">
         <div class="row">
             <div class="col">
-                <div class="card mb-3" style="width: 501px;">
+                <div class="card rounded mb-3" style="width: 500px;">
                     @if (Str::startsWith($photo->cover_image, 'https://'))
-                        <img  width="500"  src="{{$photo->cover_image}}" alt="{{$photo->slug}}">
+                        <img  class="img-fluid card-img-top"  src="{{$photo->cover_image}}" alt="{{$photo->slug}}">
                         @else
-                            <img width="500"  src="{{asset('storage/' . $photo->cover_image)}}" alt="{{$photo->slug}}">
+                            <img class="img-fluid card-img-top"  src="{{asset('storage/' . $photo->cover_image)}}" alt="{{$photo->slug}}">
                         @endif
                     <div class="card-body" style="width: 18rem;">
                     <p class="card-text">{{$photo->description}}</p>
@@ -41,7 +44,7 @@
                     </div>
                     
                 </div>
-                <a href="{{route('admin.photos.index')}}" class="btn btn-dark">Back</a>
+                
                 </div>
             </div>
         </div>
