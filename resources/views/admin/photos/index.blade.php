@@ -43,7 +43,10 @@
                     </td>
                     <td>{{$photo->title}}</td>
                     <td>{{$photo->camera}}</td>
-                    <td>VIEW\EDIT\DELETE</td>
+                    <td>
+                        <a class="btn btn-light" href="{{route('admin.photos.show', $photo)}}">View</a>
+                        <a class="btn btn-secondary" href="{{route('admin.photos.edit', $photo)}}">Edit</a>
+                        \DELETE</td>
                 </tr>
                     @empty
                     <tr
