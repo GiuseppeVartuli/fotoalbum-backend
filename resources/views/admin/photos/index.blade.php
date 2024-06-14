@@ -47,7 +47,8 @@
                     <td>
                         <a class="btn btn-light" href="{{route('admin.photos.show', $photo)}}">View</a>
                         <a class="btn btn-secondary" href="{{route('admin.photos.edit', $photo)}}">Edit</a>
-                        \DELETE</td>
+                        @include('partials.delete-modal')
+                    </td>
                 </tr>
                     @empty
                     <tr

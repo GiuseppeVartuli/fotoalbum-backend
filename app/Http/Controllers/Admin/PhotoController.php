@@ -7,6 +7,7 @@ use App\Http\Requests\StorePhotoRequest;
 use App\Http\Requests\UpdatePhotoRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 
 class PhotoController extends Controller
@@ -90,6 +91,12 @@ class PhotoController extends Controller
      */
     public function destroy(Photo $photo)
     {
-        //
+        if($photo->cover_image && !Str::startsWith($photo, 'https://')){
+            Storage::delete($photo->cover_image);
+        }
+
+        $photo->delete();
+
+        return to_route('admin.photos.index')->with('message', 'Photo successfully deleted');
     }
 }
