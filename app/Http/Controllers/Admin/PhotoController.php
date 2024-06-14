@@ -91,7 +91,7 @@ class PhotoController extends Controller
      */
     public function destroy(Photo $photo)
     {
-        if($photo->cover_image && !Str::startsWith($photo, 'https://')){
+        if($photo->cover_image && !Str::startsWith($photo->cover_image, 'https://')){
             Storage::delete($photo->cover_image);
         }
 
