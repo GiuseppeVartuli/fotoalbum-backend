@@ -25,7 +25,8 @@ class UpdatePhotoRequest extends FormRequest
             'title' => 'required',
             'cover_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'description' => 'nullable',
-            'camera' => 'nullable'
+            'camera' => 'nullable',
+            'in_evindece' => 'boolean'
         ];
     }
 }

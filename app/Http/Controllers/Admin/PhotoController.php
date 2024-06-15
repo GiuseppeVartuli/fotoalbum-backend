@@ -40,6 +40,8 @@ class PhotoController extends Controller
         $val_data = $request->validated();
 
         $val_data['cover_image'] = Storage::put('uploads', $request->cover_image);
+
+        $val_data['in_evidence'] = $request->has('in_evidence') ? true : false;
         
         //dd($val_data);
         Photo::create($val_data);
@@ -71,6 +73,8 @@ class PhotoController extends Controller
         //dd($request->all());
 
         $val_data = $request->validated();
+
+        $val_data['in_evidence'] = $request->has('in_evidence') ? true : false;
 
         if($request->has('cover_image')){
 

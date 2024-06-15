@@ -21,6 +21,7 @@
                     </caption>
                     <tr>
                         <th>ID</th>
+                        <th>In Evidence</th>
                         <th>Cover Image</th>
                         <th>Title</th>
                         <th>Camera</th>
@@ -34,6 +35,13 @@
                     class="table-dark"
                 >
                     <td scope="row">{{$photo->id}}</td>
+                    <td scope="row">
+                        @if ($photo->in_evidence) 
+                            <span class="badge bg-success">In evidence</span>
+                        @else
+                            <span class="badge bg-secondary">Not in evidence</span>
+                        @endif
+                    </td>
                     <td>
                         @if (Str::startsWith($photo->cover_image, 'https://'))
                         <img width="180" height="180" src="{{$photo->cover_image}}" alt="...">
@@ -54,7 +62,7 @@
                     <tr
                     class="table-dark"
                 >
-                    <td scope="row" colspan="5">Not Photo</td>
+                    <td scope="row" colspan="6">Not Photo</td>
                     
                 </tr>
                     @endforelse

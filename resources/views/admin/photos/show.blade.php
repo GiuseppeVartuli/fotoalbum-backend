@@ -23,6 +23,13 @@
                         @endif
                     <div class="card-body" style="width: 18rem;">
                     <p class="card-text">{{$photo->description}}</p>
+                    <p class="card-text">
+                        @if ($photo->in_evidence) 
+                            <span class="badge bg-success">In evidence</span>
+                        @else
+                            <span class="badge bg-secondary">Not in evidence</span>
+                        @endif
+                    </p>
                     <p class="card-text"><small class="text-body-secondary"><strong>Macchina:</strong> {{$photo->camera}}</small></p>
                     </div>
                     
