@@ -28,7 +28,7 @@
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_laravel">
-                        <img width="180" src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/320840679/original/dc571e360f591d297f0e21b213ccf228629af85f/create-a-photography-and-camera-logo-or-icon-within-16-hours.jpg" alt="logo">
+                        <img width="180" src="/img/logo.jpg" alt="logo">
                     </div>
                     {{-- config('app.name', 'Laravel') --}}
                 </a>
