@@ -45,7 +45,7 @@
 
         <div class="form-check mb-5">
             <input type="checkbox" class="form-check-input" id="in_evidence" name="in_evidence" value="0" {{ old('in_evidence', $photo->in_evidence) ? 'checked' : '' }}>
-            <label class="form-check-label" for="in_evidence">In evidenza</label>
+            <label class="form-check-label" for="in_evidence">In evidence</label>
             @error('in_evidence')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
