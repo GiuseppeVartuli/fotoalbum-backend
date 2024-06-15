@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Album;
 
 class AlbumSeeder extends Seeder
 {
@@ -12,6 +13,12 @@ class AlbumSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $albums = ['Sports', 'Nature', 'Animals', 'Travels', 'Monuments', 'Events', 'Sea', 'Mountain'];
+
+        foreach ($albums as $album) {
+            $newType = new Album();
+            $newType->name =$album;
+            $newType->save();
+        }
     }
 }
