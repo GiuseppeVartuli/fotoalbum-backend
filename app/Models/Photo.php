@@ -10,7 +10,7 @@ class Photo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'cover_image','description', 'camera', 'in_evidence' ];
+    protected $fillable = ['title', 'cover_image','description', 'camera', 'in_evidence', 'album_id' ];
 
 
     /**

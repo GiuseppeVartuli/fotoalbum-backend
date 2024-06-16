@@ -30,6 +30,9 @@
                             <span class="badge bg-secondary">Not in evidence</span>
                         @endif
                     </p>
+                    <p class="card-text">
+                        <span>{{ $photo->album ? $photo->album->name : 'Not Album' }}</span>
+                    </p>
                     <p class="card-text"><small class="text-body-secondary"><strong>Macchina:</strong> {{$photo->camera}}</small></p>
                     </div>
                     

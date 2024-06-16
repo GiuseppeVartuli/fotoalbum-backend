@@ -23,6 +23,7 @@
                         <th>ID</th>
                         <th>In Evidence</th>
                         <th>Cover Image</th>
+                        <th>Album</th>
                         <th>Title</th>
                         <th>Camera</th>
                         <th>Operations</th>
@@ -50,6 +51,7 @@
                         @endif
                         
                     </td>
+                    <td>{{$photo->album ? $photo->album->name : 'No Album'}}</td>
                     <td>{{$photo->title}}</td>
                     <td>{{$photo->camera}}</td>
                     <td>

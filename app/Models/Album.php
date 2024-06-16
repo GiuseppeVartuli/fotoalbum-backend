@@ -10,6 +10,8 @@ class Album extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name'];
+
 
     /**
      * Get all of the photos for the Album
