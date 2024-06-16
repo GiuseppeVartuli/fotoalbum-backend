@@ -64,7 +64,9 @@ class PhotoController extends Controller
      */
     public function edit(Photo $photo)
     {
-        return view('admin.photos.edit', compact('photo'));
+        $albums = Album::all();
+
+        return view('admin.photos.edit', compact('photo', 'albums'));
     }
 
     /**

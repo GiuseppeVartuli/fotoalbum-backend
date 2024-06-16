@@ -72,11 +72,10 @@
                     
                     
                 </tbody>
-                <tfoot>
-                    
-                </tfoot>
             </table>
         </div>
-        
+        <div>
+            {{ $photos->links('pagination::bootstrap-5') }}
+        </div>
     </div>
 @endsection

@@ -85,6 +85,32 @@
             </div>
         </div>
 
+
+
+
+        <!-- Album -->
+
+        <div class="mb-3">
+            <label for="album_id" class="form-label">Name Album</label>
+            <select
+                class="form-select"
+                name="album_id"
+                id="album_id"
+                
+            >
+                <option selected disabled>Select one</option>
+                
+                @foreach ($albums as $album)
+                    <option value="{{$album->id}}" {{old('album_id', $photo->album_id) == $album->id ? 'selected' : ''}}>{{$album->name}}</option>
+                @endforeach
+            </select>
+        </div>
+
+
+
+
+
+
         <!-- CAMERA -->
         <div class="mb-5">
             <label for="camera" class="form-label">Camera</label>
