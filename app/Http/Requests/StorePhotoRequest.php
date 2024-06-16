@@ -24,7 +24,7 @@ class StorePhotoRequest extends FormRequest
         return [
             'title' => 'required',
             'album_id' => 'nullable|exists:albums,id',
-            'cover_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'cover_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'description' => 'nullable',
             'camera' => 'nullable',
             'in_evindece' => 'boolean'
