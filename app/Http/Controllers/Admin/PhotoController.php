@@ -7,6 +7,7 @@ use App\Http\Requests\StorePhotoRequest;
 use App\Http\Requests\UpdatePhotoRequest;
 use App\Http\Controllers\Controller;
 use App\Models\Album;
+use App\Models\Category;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -29,7 +30,8 @@ class PhotoController extends Controller
     public function create()
     {
         $albums = Album::all();
-        return view('admin.photos.create', compact('albums'));
+        $categories = Category::all(); 
+        return view('admin.photos.create', compact('albums', 'categories'));
     }
 
     /**
