@@ -39,7 +39,7 @@
         <!-- In Evidence -->
 
         <div class="form-check mb-5">
-            <input type="checkbox" class="form-check-input" id="in_evidence" name="in_evidence" value="0" {{ old('in_evidence') ? 'checked' : '' }}>
+            <input type="checkbox" class="form-check-input" id="in_evidence" name="in_evidence" value="1" {{ old('in_evidence') ? 'checked' : '' }}>
             <label class="form-check-label" for="in_evidence">In evidence</label>
             @error('in_evidence')
                 <div class="text-danger">{{ $message }}</div>
@@ -80,7 +80,7 @@
                 <option selected disabled>Select one</option>
                 
                 @foreach ($albums as $album)
-                    <option value="{{$album->id}}" {{old('album_id') == $album->id ? 'selectd' : ''}}>{{$album->name}}</option>
+                    <option value="{{$album->id}}" {{old('album_id') == $album->id ? 'selected' : ''}}>{{$album->name}}</option>
                 @endforeach
             </select>
         </div>
