@@ -74,8 +74,9 @@ class PhotoController extends Controller
     public function edit(Photo $photo)
     {
         $albums = Album::all();
+        $categories = Category::all();
 
-        return view('admin.photos.edit', compact('photo', 'albums'));
+        return view('admin.photos.edit', compact('photo', 'albums', 'categories'));
     }
 
     /**
@@ -99,6 +100,12 @@ class PhotoController extends Controller
         }
 
         $photo->update($val_data);
+
+        if($request->has('categories')) {
+            $photo->categories()->sync($val_data['categories']);
+        } else {
+            $photo->categories()->detach();
+        }
 
         return to_route('admin.photos.index')->with('message', 'Photo successfully updated');
     }

@@ -25,6 +25,7 @@ class UpdatePhotoRequest extends FormRequest
             'title' => 'required',
             'cover_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'album_id' => 'nullable|exists:albums,id',
+            'categories' => 'nullable|exists:categories,id',
             'description' => 'nullable',
             'camera' => 'nullable',
             'in_evindece' => 'boolean'
