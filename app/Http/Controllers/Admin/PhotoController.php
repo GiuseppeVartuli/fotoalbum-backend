@@ -47,9 +47,16 @@ class PhotoController extends Controller
 
         $val_data['in_evidence'] = $request->has('in_evidence') ? true : false;
         
-        //dd($val_data);
-        Photo::create($val_data);
+        $photo = Photo::create($val_data);
+
+        if($request->has('categories')) {
+            $photo->categories()->attach($val_data['categories']);
+        }
+
         
+        
+        
+        //dd($val_data);
         return to_route('admin.photos.index')->with('message', 'Photo added successfully');
     }
 
