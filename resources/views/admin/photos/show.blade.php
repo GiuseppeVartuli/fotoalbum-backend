@@ -36,7 +36,7 @@
                         @forelse ($photo->categories as $category)
                             <span class="badge bg-secondary"> {{$category->name}}</span>
                         @empty
-                            <span>Not Category</span>
+                            <span class="badge bg-secondary">Not Category</span>
                         @endforelse 
                     <p class="card-text"><small class="text-body-secondary"><strong>Macchina:</strong> {{$photo->camera}}</small></p>
                     </div>
