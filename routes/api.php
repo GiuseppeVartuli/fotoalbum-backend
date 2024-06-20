@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\CategoriesController;
 use App\Http\Controllers\API\PhotoController;
 use App\Models\Photo;
 use Illuminate\Http\Request;
@@ -24,3 +25,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('photos', [PhotoController::class, 'index'] );
 
 Route::get('photos/{photo}', [PhotoController::class, 'show']);
+
+Route::get('categories', [CategoriesController::class, 'index']);
+Route::get('categories/{category}', [CategoriesController::class, 'show']);

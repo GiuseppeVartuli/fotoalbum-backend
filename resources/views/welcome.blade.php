@@ -23,24 +23,15 @@
                 Fotografia Commerciale: Collaboro con aziende per creare immagini accattivanti che rappresentano al meglio i loro prodotti e servizi.
                 Filosofia
                 Credo che ogni foto racconti una storia e il mio obiettivo è quello di catturare quelle storie nel modo più autentico possibile. Lavoro con dedizione e creatività, cercando sempre nuovi modi per esprimere la mia visione artistica e soddisfare le esigenze dei miei clienti.
-            <p>
+            </p>
 
         </div>
     </div>
     
 </div>
-<div class="gallery">
-    <div class="container">
-        <h3 >
-            Photo in evidence
-        </h3>
-        <div class="gallery_evidence">
-            
-        </div>
-    <a href="https://packagist.org/packages/pacificdev/laravel_9_preset" class="btn btn-secondary btn-lg " type="button">All photos</a>
 
-    </div>
-    
+        <!--<a href="https://packagist.org/packages/pacificdev/laravel_9_preset" class="btn btn-secondary btn-lg " type="button">All photos</a>-->
+
     
     
 </div>
